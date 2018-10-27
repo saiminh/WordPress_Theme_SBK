@@ -1,0 +1,7 @@
+.page-header {
+	@include fullscreen-header;
+}
+
+.page_entry-content .entry-content-slider {
+	@include entry-content-slider;
+}

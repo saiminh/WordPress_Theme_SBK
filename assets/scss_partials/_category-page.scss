@@ -1,0 +1,65 @@
+body.category .category-header {
+	@include fullscreen-header;
+
+	//padding-top: 24vh;
+}
+
+.category_background {
+	top: 0;
+	height: 41vh;
+
+	@media screen and (min-width: 768px) {
+		height: 100vh;
+	}
+}
+
+.category-content-box, 
+.category_casestudies {
+	//padding: 1.5rem;
+	transform: translate(0, 0);
+	transition: .2s all linear;
+
+	@media screen and (min-width: 768px) {
+		padding: $left-spacing-768;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: $left-spacing-1200;
+	}
+
+	.header-minimized & {
+
+		@media screen and (min-width: 768px) {
+			transform: translate(-$left-spacing-768, 0);
+		}
+
+		@media screen and (min-width: 1200px) {
+			transform: translate(-$left-spacing-1200, 0);
+		}
+	}
+}
+
+.category_postlist {
+	@extend .sidebar_postlist;
+}
+
+.category_postlist_wrapper {
+	@extend .sidebar_postlist_wrapper;
+}
+
+.category_postlist_postlink {
+	@extend .sidebar_postlist_postlink;
+}
+
+.category_postlist_postlink_text {
+	@extend .sidebar_postlist_postlink_text;
+}
+
+.category_postlist_thumbnail-wrapper {
+	@extend .sidebar_postlist_thumbnail-wrapper;
+}	
+
+.category_excerpt {
+	margin-top: 1rem;
+	font-style: italic;
+}

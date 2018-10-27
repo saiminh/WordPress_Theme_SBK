@@ -1,0 +1,41 @@
+// html {
+//   height: 100%;
+//   overflow: hidden;
+// }
+
+// body, #wrapper {
+// 	height: 100%;
+// }
+
+// #container { 
+//   margin:0;
+//   padding:0;
+//   perspective: 1px;
+//   transform-style: preserve-3d;
+//   height: 100%;
+//   overflow-y: scroll;
+//   overflow-x: hidden;
+// }
+
+
+// .frontpage-header {
+// 	position: relative;
+// 	padding: 25vh 10%;
+// 	min-height: 100vh;
+// 	width: 100vw;
+// 	box-sizing: border-box;
+// 	transform-style: inherit;
+// }
+
+
+// .background {
+// 	content: "";
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+// 	left:0;
+// 	right:0;
+// 	transform: translateZ(-1px) scale(2);
+// 	z-index:-1;
+// }
+

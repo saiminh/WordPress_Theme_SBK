@@ -1,0 +1,93 @@
+.frontpage_header {
+	@include fullscreen-header;
+	height: 100vh;
+	position: relative;
+
+	@media screen and (max-width: 768px) {
+		padding-top: 35vh;
+	}
+}
+
+.frontpage_hero_carousel {
+
+    & .file-list-wrap, 
+    & .slide {    	
+    	height: 100vh;
+    }
+
+    & .slide {
+    	position: absolute;
+    	width: 100vw;
+    	opacity: 0;
+    	visibility: hidden;
+    	transform: scale(1.05);
+    	transition: all 2s ease-in-out;
+    }
+
+    & .slide.active {
+    	opacity: 1;
+    	visibility: visible;
+    	transform: scale(1);
+    	transition: all 2s ease-in-out;
+    }
+
+    & .casestudy_gallery_caption {
+    	display: none
+    }
+}
+
+.entry-title.frontpage_entry-title {
+	font-size: 1.7rem;
+	max-width: 33em;
+
+	@media screen and (min-width: 768px) {
+		font-size: 2rem;
+		max-width: 16em;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 2.25rem;
+	}
+}
+
+.button.frontpage_nav_button {
+	font-size: 1rem;
+	line-height: 45px;
+	margin: .1rem 0;
+}
+
+.button i.fa-chevron-down {
+    font-size: .75rem;
+    position: relative;
+    top: -2px;
+    padding: 0 2px 0 4px;
+}
+
+.home .entry-content {
+	padding: 2rem; 
+
+	@media screen and (min-width: 768px) {
+		padding: 2rem 2rem 2rem 0;
+	}
+
+	&.entry-content-homecategoryintro {
+		padding: 2rem; 
+
+		@media screen and (min-width: 768px) {
+			padding: 2rem 0;
+			position: relative;
+			left: -1rem;
+			overflow: auto;
+		}
+	}
+}
+
+.homecategoryinfo {
+
+	@media screen and (min-width: 768px) {
+		width: 33.3%;
+		float: left;
+		padding: 0 1rem;
+		box-sizing: border-box;
+	}
+}

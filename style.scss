@@ -1,0 +1,325 @@
+/*
+Theme Name: sbkTheme
+Theme URI: http://wordpress.org/themes/sbkTheme
+Author: TidyThemes
+Author URI: http://floter.design/
+Description: Simon Bush King Architecture Custom Theme
+Version: 1.0
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: snirkins
+Text Domain: sbkTheme
+
+sbkTheme WordPress Theme © 2011-2015 TidyThemes
+sbkTheme is distributed under the terms of the GNU GPL
+*/
+
+$logo-size-small: 80px;
+$logo-size-medium: 120px;
+$logo-size-large: 140px;
+
+$left-spacing-768: 20px;
+$left-spacing-1200: 44px;
+
+$space: 1rem;
+
+$copper: #C76B6B;
+$red: #b70000;
+$green: #437543;
+
+@mixin fullscreen-header {
+	padding: 33vh 1rem 0 1rem;
+	box-sizing: border-box;
+
+	@media screen and (min-width: 768px) {
+		padding-left: $logo-size-medium;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding-left: $logo-size-large; 
+	}
+}
+
+@mixin entry-content-slider {
+	transform: translate(0, 0);
+	transition: .2s all linear;
+
+	@media screen and (min-width: 768px) {
+		padding: $left-spacing-768;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: $left-spacing-1200;
+	}
+
+	.header-minimized & {
+
+		@media screen and (min-width: 768px) {
+			transform: translate(-$left-spacing-768, 0);
+		}
+
+		@media screen and (min-width: 1200px) {
+			transform: translate(-$left-spacing-1200, 0);
+		}
+	}
+}
+
+html, body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+
+	@media screen and (min-width: 480px) {
+		font-size: 20px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 22px;
+	}
+
+	@media screen and (min-width: 1400px) {
+		font-size: 22px;
+		font-size: 1.25vw;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, p {
+	margin-bottom: 1rem;
+	max-width: 38rem;
+}
+
+a {
+	color: $copper;
+}
+
+ul, ol {
+	margin-left: 2em;
+	margin-bottom: 1rem;
+}
+
+.background {
+	width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+    position: absolute;
+    overflow-x: hidden;
+    transition: width .2s linear;
+
+    .header-minimized & {
+    	@media screen and (min-width: 1581px) {
+	    	width: 1580px;
+	    }
+    }
+}
+
+.entry-title {
+	line-height: 1.4;
+	font-size: 1.7rem;
+	max-width: 33em;
+	transform: translate3d(0, 0, 0);
+	transition: all 1s ease-out;
+	opacity: 1;
+
+	@media screen and (min-width: 768px) {
+		font-size: 2rem;
+		max-width: 16em;
+	   // margin: 0 auto;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 2.25rem;
+	}
+}
+
+.loading .entry-title {
+	transform: translate3d(0, -50px, 0);
+	transition: all 1s ease-out;
+	opacity: 0;
+}
+
+.entry-title a,
+.entry-title span {
+    background: #000;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.25rem 0;
+}
+
+.entry-content {
+	background-color: #FFF;
+	padding: $space;
+	max-width: 1440px;
+	box-sizing: border-box;
+	position: relative;
+
+	@media screen and (min-width: 768px) {
+		margin-left: $logo-size-medium;
+		padding: 0 $space 0 0;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-left: $logo-size-large;
+		padding: 0;
+	}
+}
+
+.columns {
+	@media screen and (min-width: 1200px) {
+		column-count: 3;
+		column-gap: 2rem; 
+	}
+
+	& > h2 {
+		column-span: all;
+	}
+}
+
+.button {
+	display: inline-block;
+	background-color: $copper;
+	color: #FFF;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	text-decoration: none;
+	padding: 0 .5rem;
+	font-size: 1rem;
+	border: none;
+	width: 100%;
+	text-align: center;
+	line-height: 45px;
+	box-sizing: border-box;
+
+	@media screen and (min-width: 768px) {
+		width: auto;
+		line-height: 1.5;
+		padding: .75rem; 
+	}
+}
+
+.button-cta {
+	
+}
+
+.button-secondary {
+	background-color: transparent;
+	border: 2px solid $copper;
+	color: $copper;
+}
+
+.button-white {
+	border-color: #FFF;
+	color: #FFF;
+}
+
+.post-edit-link {
+	color: $copper;
+	font-size: .75rem;
+	display: none;
+	// UNHIDE AFTER DONE!!!
+}
+
+div.cover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+  	content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,0));
+  }
+}
+
+img.cover {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.bgwidth { width: 100%; height: auto}
+.bgheight { height: 100%; width: auto;}
+
+// Footer 
+
+.nav-below_headline {
+	padding: 0 $space;
+}
+
+#nav-below {
+	display: table;
+	width: 100%;
+}
+
+.nav-previous,
+.nav-next {
+	background-color: #FFF;
+    color: $copper;
+    display: block;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding: 1rem 1rem 1rem 2rem;
+    position: relative;
+
+    & > a {
+    	color: $copper;
+	    text-decoration: none;
+    }
+
+    & .meta-nav {
+    	position: absolute;
+    	left: 0.5rem;
+    	top: 50%;
+    	margin-top: -.75rem;
+    	font-weight: bold;
+    }
+}
+
+.nav-next {
+    padding: 1rem 2rem 1rem 1rem ;
+    border-left: 1px solid #FFF;
+	
+	& .meta-nav {
+    	left: auto;
+    	right: .5rem;
+    }
+}
+
+.view-upto-1200 {
+	@media screen and (min-width: 1200px){
+		display: none;
+	}
+}
+
+.view-from-1200 {
+	@media screen and (max-width: 1200px){
+		display: none; 
+	}
+}
+
+@import "assets/scss_partials/jquery.fullpage.min.css",
+		"assets/scss_partials/_header.scss",
+		"assets/scss_partials/_footer.scss",
+		"assets/scss_partials/_sidebar.scss",
+		"assets/scss_partials/_front-page.scss",
+		"assets/scss_partials/_category-page.scss",
+		"assets/scss_partials/_single_casestudy.scss",
+		"assets/scss_partials/_gallery.scss",
+		"assets/scss_partials/_parallax.scss",
+		"assets/scss_partials/_page.scss";

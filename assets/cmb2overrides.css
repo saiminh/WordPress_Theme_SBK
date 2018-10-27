@@ -1,0 +1,31 @@
+.casefacts-row {
+	display: inline-block;
+	margin: 0 15px 0 0;
+}
+
+.casefacts-row label  {
+	display: block;
+	margin-bottom: 4px;
+}
+
+.casefacts-row label em{
+	color: #BBBBBB;
+}
+
+.cmb-type-group #_casefacts_group_demo_repeat .postbox .cmb-row, 
+.postbox-container #_casefacts_group_demo_repeat .postbox .cmb-row {
+	display: inline-block;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.cmb-type-group .cmb2-wrap>.cmb-field-list>.cmb-row, 
+.postbox-container .cmb2-wrap>.cmb-field-list>.cmb-row {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.cmb2-wrap input, 
+.cmb2-wrap textarea{
+    margin: 0 0 0.5em 0;
+}
