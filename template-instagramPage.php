@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php /* Template Name: Instagram News Page */ get_header(); ?>
 <header class="category-header">
 	<div class="category-title"><span class="category-title_category">\ <?php the_title(); ?></span></div>
 </header>
@@ -19,6 +19,7 @@
 				<div class="entry-content-slider">
 					<?php // if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 					<?php the_content(); ?>
+					<?php get_template_part('instagram'); ?>
 					<div class="entry-links"><?php wp_link_pages(); ?></div>
 				</div>
 			</section>

@@ -19,15 +19,17 @@
     	position: absolute;
     	width: 100vw;
     	opacity: 0;
-    	visibility: hidden;
+    	/*visibility: hidden;*/
+    	-webkit-transform: scale(1.05);
     	transform: scale(1.05);
     	transition: all 2s ease-in-out;
     }
 
     & .slide.active {
     	opacity: 1;
-    	visibility: visible;
-    	transform: scale(1);
+    	/*visibility: visible;*/
+    	-webkit-transform: scale(1);
+    	        transform: scale(1);
     	transition: all 2s ease-in-out;
     }
 
@@ -37,16 +39,16 @@
 }
 
 .entry-title.frontpage_entry-title {
-	font-size: 1.7rem;
+	/*font-size: 1.7rem;*/
 	max-width: 33em;
 
 	@media screen and (min-width: 768px) {
-		font-size: 2rem;
+		/*font-size: 2rem;*/
 		max-width: 16em;
 	}
 
 	@media screen and (min-width: 1200px) {
-		font-size: 2.25rem;
+		/*font-size: 2.25rem;*/
 	}
 }
 
@@ -63,7 +65,7 @@
     padding: 0 2px 0 4px;
 }
 
-.home .entry-content {
+.page-template-template-frontPage .entry-content {
 	padding: 2rem; 
 
 	@media screen and (min-width: 768px) {

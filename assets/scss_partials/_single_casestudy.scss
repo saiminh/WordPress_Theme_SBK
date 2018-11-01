@@ -7,7 +7,8 @@
     	position: absolute;
     	top: 50%;
     	left: 50%;
-    	transform: translate(-50%, -50%);
+    	-webkit-transform: translate(-50%, -50%);
+    	        transform: translate(-50%, -50%);
     	color: #FFF;
     	font-weight: 600;
     	padding: .66rem 1rem;
@@ -37,7 +38,7 @@
     position: absolute;
     bottom: 0;
     padding: 0 4rem 0 1rem;
-    margin-bottom: 6px; // because the span has 2px padding at the bottom
+    margin-bottom: 6px; /* because the span has 2px padding at the bottom*/
     font-size: 1.5rem;
 
     @media screen and (min-width: 768px) {
@@ -71,17 +72,22 @@
 	}
 
 	& * {
-		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+		transition: -webkit-transform 0.2s linear;
 		transition: transform 0.2s linear;
+		transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 	}
 }
 
 .header-minimized .entry-content_editor_content *{
 	@media screen and (min-width: 768px) {
-		transform: translateX(-($space * 1.5));
+		-webkit-transform: translateX(-($space * 1.5));
+		        transform: translateX(-($space * 1.5));
 	}
 	@media screen and (min-width: 1200px) {
-		transform: translateX(-($space * 2));
+		-webkit-transform: translateX(-($space * 2));
+		        transform: translateX(-($space * 2));
 	}
 }
 
@@ -97,7 +103,9 @@
 	    background: #FFF;
 	    width: 300px;
 	    box-sizing: border-box;
+	    transition: -webkit-transform .2s ease-out;
 	    transition: transform .2s ease-out;
+	    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
 	}
 	@media screen and (min-width: 1300px) {
 		width: 340px;
@@ -110,7 +118,8 @@
 	&.sticky {
 		@media screen and (min-width: 1200px) {
 			position: fixed;			
-			transform: translate(0, 3.5rem);
+			-webkit-transform: translate(0, 3.5rem);			
+			        transform: translate(0, 3.5rem);
 		}
 
 		@media screen and (min-width: 1581px) {
@@ -118,7 +127,8 @@
 		}
 
 		@media screen and (min-width: 1640px) {
-			transform: none;
+			-webkit-transform: none;
+			        transform: none;
 		}
 	}
 }
@@ -270,7 +280,7 @@
 
 .casestudy_cta {
 	background-color: #DDD;
-	//color: #FFF;
+	/*color: #FFF;*/
 	padding: 1.5 * $space;
 	margin-top: 2 * $space;
 
@@ -312,7 +322,8 @@
 		left: 50%;
 		display: block;
 		top: 50%;
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 		color: #FFF;
 		border-color: #FFF;
 		z-index: 2;

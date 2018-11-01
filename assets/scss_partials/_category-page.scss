@@ -1,7 +1,7 @@
 body.category .category-header {
 	@include fullscreen-header;
 
-	//padding-top: 24vh;
+	/*padding-top: 24vh;*/
 }
 
 .category_background {
@@ -15,8 +15,9 @@ body.category .category-header {
 
 .category-content-box, 
 .category_casestudies {
-	//padding: 1.5rem;
-	transform: translate(0, 0);
+	/*padding: 1.5rem;*/
+	-webkit-transform: translate(0, 0);
+	        transform: translate(0, 0);
 	transition: .2s all linear;
 
 	@media screen and (min-width: 768px) {
@@ -30,11 +31,13 @@ body.category .category-header {
 	.header-minimized & {
 
 		@media screen and (min-width: 768px) {
-			transform: translate(-$left-spacing-768, 0);
+			-webkit-transform: translate(-$left-spacing-768, 0);
+			        transform: translate(-$left-spacing-768, 0);
 		}
 
 		@media screen and (min-width: 1200px) {
-			transform: translate(-$left-spacing-1200, 0);
+			-webkit-transform: translate(-$left-spacing-1200, 0);
+			        transform: translate(-$left-spacing-1200, 0);
 		}
 	}
 }

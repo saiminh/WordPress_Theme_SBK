@@ -1,0 +1,162 @@
+.instagram-home {
+	padding: $space;
+	position: relative;
+	overflow: auto;
+	background-color: #545050;
+	color: #FFF;
+	z-index: 5;
+
+	@media screen and (min-width: 768px) {
+		padding-left: $logo-size-medium;
+
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding-left: $logo-size-large;
+	}
+}
+
+.instagram-home .instagram_images {
+	max-width: 1440px;
+	@media screen and (min-width: 768px) {
+		margin-left: -$space;
+	}
+}
+
+.instagram-home a {
+	position: relative;
+	display: block;
+	margin-bottom: 1rem;
+	box-sizing: border-box;
+/*	height: 230px;*/
+	overflow: hidden;
+	text-decoration: none;
+	padding-bottom: 1.25rem;
+
+	@media screen and (min-width: 768px) {
+		width: 50%;
+		float: left;
+		padding-left: 1rem;
+	}
+
+	@media screen and (min-width: 1120px) {
+		width: 25%;
+		max-width: 100%;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	 &:after {
+    	content: "Read more";
+    	position: absolute;
+    	bottom: 0;
+    	right: 0;
+    	font-size: 0.7rem;
+	    font-weight: 400;
+	    color: #FFF;
+    	background-color: $copper;
+	    padding: 0 .15rem;
+    }
+}
+
+.instagram-home .instagram_imageContainer {
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+.instagram-home span.instagram_image_caption {
+    font-size: .7rem;
+    font-weight: 400;
+    color: #FFF;
+    padding: .25rem 0;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    height: 3.33rem;
+    position: relative;
+
+     &:after {
+     	content: '...';
+     	background-color: $footer-color;
+     	position: absolute;
+     	bottom: 0;
+     	right: 0;
+     }
+
+    @media screen and (max-width: 767px) {
+    	left: 0;
+    }
+}
+
+.instagram-page a {
+	position: relative;
+	text-decoration: none;
+	color: #000;
+	display: block;
+    margin-bottom: 2rem;
+    clear: both;
+    padding: 1rem;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+	overflow: auto;
+
+    @media screen and (min-width: 768px) {
+    	
+    }
+}
+
+.instagram-page .instagram_imageContainer {
+
+	border: 1px solid #DDD;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: .5rem;
+
+	@media screen and (min-width: 768px) {
+		width: 33.3%;
+		float: left;
+		margin-bottom: 0;
+	}
+}
+
+.instagram-page .instagram_image {
+	width: 100%;
+	display: block;
+
+	@media screen and (min-width: 768px) {
+		margin: 0;
+	}
+}
+.instagram-page .instagram_image_date {
+	display: block;
+	font-style: italic;
+	font-size: .75rem;
+
+	@media screen and (min-width: 768px) {
+		margin-left: 33.3%;
+		margin-left: calc(33.3% + 1rem);
+	}
+}
+.instagram-page .instagram_image_caption {
+
+	margin-bottom: 0;
+
+	@media screen and (min-width: 768px) {
+		margin-left: 33.3%;
+		margin-left: calc(33.3% + 1rem);
+	}
+}
+
+.instagram-page .instagram_image_location {
+	display: block;
+	font-size: 1rem;
+	margin-bottom: .5rem;
+
+	@media screen and (min-width: 768px) {
+		margin-left: 33.3%;
+		margin-left: calc(33.3% + 1rem);
+	}
+}

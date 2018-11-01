@@ -70,7 +70,7 @@
 	width: 3rem;
 }
 
-// fullpage.js overrides:
+/* fullpage.js overrides:*/
 
 #fp-nav.left {
 	left: -14px;
@@ -79,82 +79,4 @@
 #fp-nav ul li a span, 
 .fp-slidesNav ul li a span {
 	background: #FFF;
-}
-
-
-.instagram {
-//	background-color: #EEE;
-	padding: $space;
-	position: relative;
-	overflow: auto;
-	background-color: #545050;
-	color: #FFF;
-	z-index: 5;
-
-	@media screen and (min-width: 768px) {
-		padding-left: $logo-size-medium;
-
-	}
-
-	@media screen and (min-width: 1200px) {
-		padding-left: $logo-size-large;
-	}
-}
-
-.instagram_images {
-	max-width: 1440px;
-	@media screen and (min-width: 768px) {
-		margin-left: -$space;
-	}
-}
-
-.instagram a {
-	position: relative;
-	display: block;
-	margin-bottom: 1rem;
-	box-sizing: border-box;
-	height: 230px;
-	overflow: hidden;
-
-	@media screen and (min-width: 768px) {
-		width: 50%;
-		float: left;
-		padding-left: 1rem;
-	}
-
-	@media screen and (min-width: 1120px) {
-		width: 25%;
-		max-width: 100%;
-	}
-
-	img {
-		width: 100%;
-	}
-}
-
-span.instagram_image_caption {
-    position: absolute;
-    top: 100%;
-    left: 1rem;
-    transform: translate(0, -2.6rem);
-    transition: transform .2s ease-out;
-    font-size: .7rem;
-    font-weight: 600;
-    color: #000;
-    background-color: #FFF;
-    padding: .25rem .5rem;
-    box-sizing: border-box;
-   // max-height: 3rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-   // border-bottom: 4px solid #FFF;
-
-    .instagram a:hover & {
-    	transform: translate(0, -100%);
-    }
-
-    @media screen and (max-width: 767px) {
-    	left: 0;
-    }
 }

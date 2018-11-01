@@ -8,11 +8,7 @@
 
 	<?php if ( $wpb_all_query->have_posts() && !is_single() ) : ?>
 	<h3 class="sidebar_header">
-		<?php if (is_page_template('template-frontPage.php')) {
-			echo 'Latest projects'; 
-		} else {
-			echo 'More projects';
-		} ?>
+		Latest projects
 	</h3>
 	<ul class="sidebar_postlist">
 

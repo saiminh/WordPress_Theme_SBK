@@ -1,5 +1,5 @@
 body {
-//  overflow: hidden;
+/*  overflow: hidden;*/
 }
 
 #container {
@@ -29,7 +29,7 @@ body {
 	position: fixed;
 	z-index: 4;
 	width: 100%;
-//	background: linear-gradient(to top, rgba(255,255,255,0),rgba(0,0,0,.33) );
+/*	background: linear-gradient(to top, rgba(255,255,255,0),rgba(0,0,0,.33) );*/
 	transition: background-color .1s ease-out;
 }
 
@@ -42,8 +42,9 @@ body {
 	position: absolute;
 	top:-45px;
 	transition: all 0.2s linear;
-	transform: translateY(0);
-//	box-shadow: 0 1px 0 rgba(0,0,0,0.075);
+	-webkit-transform: translateY(0);
+	        transform: translateY(0);
+/*	box-shadow: 0 1px 0 rgba(0,0,0,0.075);*/
 	
 	@media screen and (min-width: 768px) {
 		display: none;
@@ -51,7 +52,8 @@ body {
 }
 
 .header-minimized #header:before {
-		transform: translateY(45px);	
+		-webkit-transform: translateY(45px);
+		        transform: translateY(45px);	
 }
 
 #branding {
@@ -88,8 +90,11 @@ body {
 			width: 100%;
 			height: 100%;
 			background-color: #FFF;
-			transform: translateY(-100%);
+			-webkit-transform: translateY(-100%);
+			        transform: translateY(-100%);
+			transition: -webkit-transform .2s linear;
 			transition: transform .2s linear;
+			transition: transform .2s linear, -webkit-transform .2s linear;
 		}
 	}
 
@@ -100,7 +105,8 @@ body {
 }
 
 .header-minimized #site-title:before {
-	transform: translateY(0);
+	-webkit-transform: translateY(0);
+	        transform: translateY(0);
 }
 
 #sbk_logo {
@@ -150,7 +156,7 @@ body {
 
 .header-minimized #sbk_logo {
 
-//	background-color: #FFF;
+/*	background-color: #FFF;*/
 	height: 45px;
 	width: 45px;
 
@@ -161,7 +167,7 @@ body {
 	@media screen and (min-width: 768px) {
 		width: $logo-size-medium;
 		height: $logo-size-medium;
-		//transform: translateY(45px);
+		/*transform: translateY(45px);*/
 	}
 
 	@media screen and (min-width: 1200px) {
@@ -177,7 +183,7 @@ body {
 	display: none;
 }
 
-// For category posts the category title is next to the logo
+/* For category posts the category title is next to the logo*/
 .category-title {
 	position: fixed;
 	z-index: 5;
@@ -233,15 +239,18 @@ body {
 		left: $logo-size-medium/2;
 	    display: inline-block;
 	    right: initial;
-	    transform-origin: left 50%;
-	    transform: translate(0%, $logo-size-medium) rotateZ(90deg);
+	    -webkit-transform-origin: left 50%;
+	            transform-origin: left 50%;
+	    -webkit-transform: translate(0%, $logo-size-medium) rotateZ(90deg);
+	            transform: translate(0%, $logo-size-medium) rotateZ(90deg);
 	    z-index: 5;
 	    transition: none;
 	}
 
 	@media screen and (min-width: 1200px) {
 		left: $logo-size-large/2;
-		transform: translate(0%, $logo-size-large) rotateZ(90deg);
+		-webkit-transform: translate(0%, $logo-size-large) rotateZ(90deg);
+		        transform: translate(0%, $logo-size-large) rotateZ(90deg);
 	}
 }
 
@@ -252,7 +261,7 @@ body {
     z-index: 2;
     font-weight: 600;
     height: 3rem;
- // width: 50px;
+ /* width: 50px;*/
     text-decoration: none;
     padding: 0;
     z-index: 10;
@@ -307,6 +316,14 @@ body {
 	color: #FFF;
 }
 
+.header-minimized .nav-toggle_text {
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		display: inherit;
+	}
+}
+
 #menu-container {
 	position: fixed;
     top: 0;
@@ -314,7 +331,8 @@ body {
     min-width: 14rem;
     z-index: 1;
     padding-top: 51px;
-    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+            transform: translate(0,0);
 }
 
 .header-minimized #menu-container {
@@ -323,7 +341,8 @@ body {
 
 .nav-open #menu-container,
 #menu-container:target  {
-	transform: translate(-100%, 0);
+	-webkit-transform: translate(-100%, 0);
+	        transform: translate(-100%, 0);
 }	
 
 

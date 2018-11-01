@@ -9,8 +9,11 @@ add_theme_support( 'post-thumbnails' );
 global $content_width;
 if ( ! isset( $content_width ) ) $content_width = 640;
 register_nav_menus(
-array( 'main-menu' => __( 'Main Menu', 'sbkTheme' ) )
-);
+    array( 
+        'main-menu' => __( 'Main Menu', 'sbkTheme' ),
+        'footer-menu' => __( 'Footer Menu', 'sbkTheme'),
+         )
+    );
 }
 add_action( 'wp_enqueue_scripts', 'sbkTheme_load_scripts' );
 function sbkTheme_load_scripts()
