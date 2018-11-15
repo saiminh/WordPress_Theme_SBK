@@ -73,12 +73,12 @@ return $count;
 //clean up the header by http://www.themelab.com/remove-code-wordpress-header/
 // ------------------------------------------------
 
-	remove_action('wp_head', 'rsd_link');
-	remove_action('wp_head', 'wlwmanifest_link');
-	remove_action('wp_head', 'wp_generator');
-	remove_action('wp_head', 'start_post_rel_link');
-	remove_action('wp_head', 'index_rel_link');
-	remove_action('wp_head', 'adjacent_posts_rel_link');
+    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'wlwmanifest_link');
+    remove_action('wp_head', 'wp_generator');
+    remove_action('wp_head', 'start_post_rel_link');
+    remove_action('wp_head', 'index_rel_link');
+    remove_action('wp_head', 'adjacent_posts_rel_link');
 
 // ------------------------------------------------
 // Custom Gallery Markup
@@ -494,9 +494,7 @@ function cta_register_field_metabox() {
         'name'          => esc_html__( 'The CTA Headline', 'cmb2' ),
         'id'            => 'cta_headline',
         'type'          => 'text',        
-        'attributes'  => array(
-            'value' => esc_html__( 'Do you have a project?', 'cmb2' ),
-        ),
+        'default'       => esc_html__( 'Do you have a project?', 'cmb2' ),
     ) );
 
     $cmb_cta->add_field( array(
@@ -506,27 +504,21 @@ function cta_register_field_metabox() {
         'options' => array( 
             'textarea_rows' => 5, 
         ),
-        'attributes'  => array(
-            'value' => esc_html__( "Or do you know someone who would be interested? Please don't hesitate to contact us and we'll chat about what we can do for you!", 'cmb2' ),
-        ),
+        'default' => esc_html__( "Or do you know someone who would be interested? Please don't hesitate to contact us and we'll chat about what we can do for you!", 'cmb2' ),
     ) );
 
     $cmb_cta->add_field( array(
         'name'          => esc_html__( 'The CTA button text', 'cmb2' ),
         'id'            => 'cta_button_text',
         'type'          => 'text',        
-        'attributes'  => array(
-            'value' => esc_html__( 'Get in touch', 'cmb2' ),
-        ),
+        'default'       => esc_html__( 'Get in touch', 'cmb2' ),
     ) );
 
     $cmb_cta->add_field( array(
         'name'          => esc_html__( 'The CTA button link', 'cmb2' ),
         'id'            => 'cta_button_link',
         'type'          => 'text_url',        
-        'attributes'  => array(
-            'value' => esc_html__( 'mailto:simon@simonbushking.com', 'cmb2' ),
-        ),
+        'default'       => esc_html__( 'mailto:simon@simonbushking.com', 'cmb2' ),
     ) );
 
 }
