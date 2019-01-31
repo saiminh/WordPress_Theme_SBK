@@ -155,6 +155,7 @@ ul, ol {
     font-weight: 600;
     padding: 0.33rem 0;
     box-shadow: -0.5rem 0 0 #000, 0.5rem 0 0 #000;
+    box-decoration-break: clone;
 }
 
 .entry-content {

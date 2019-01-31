@@ -33,22 +33,28 @@
 				<?php // if ( !is_search() ) get_template_part( 'entry-footer' ); ?>
 				<div class="entry-content entry-content-homecategoryintro">
 					<div class="homecategoryinfo">
+						<div class="homecategoryinfo_content">
 						<?php
 							$text_homecategoryinfo1 = wpautop(get_post_meta( get_the_ID(), 'homecategoryinfo1_content', true ));
 							echo $text_homecategoryinfo1;
 						?>
+						</div>
 					</div>
 					<div class="homecategoryinfo">
+						<div class="homecategoryinfo_content">
 						<?php
 							$text_homecategoryinfo2 = wpautop(get_post_meta( get_the_ID(), 'homecategoryinfo2_content', true ));
 							echo $text_homecategoryinfo2;
 						?>
+						</div>
 					</div>
 					<div class="homecategoryinfo">
+						<div class="homecategoryinfo_content">
 						<?php
 							$text_homecategoryinfo3 = wpautop(get_post_meta( get_the_ID(), 'homecategoryinfo3_content', true ));
 							echo $text_homecategoryinfo3;
 						?>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -163,29 +163,30 @@ function frontpage_metabox_function() {
         'id'            => 'frontpage_metabox',
         'title'         => __( 'Frontpage', 'cmb2' ),
         'object_types'  => array( 'page'), // Post type 
-        'priority'      => 'after_title',
+        //'priority'      => 'after_title',
         'show_on'      => array( 'key' => 'page-template', 'value' => 'template-frontPage.php' ), 
     ) );
 
     // Regular text field
     $cmb->add_field( array(
         'name'       => __( 'Headline', 'cmb2' ),
-        'desc'       => __( 'Enter the headline to appear on the frontpage', 'cmb2' ),
+        'desc'       => __( 'Enter the main hero headline to appear on the frontpage', 'cmb2' ),
         'id'         => $prefix . 'headline',
         'type'       => 'text',      
     ) );
 }
 
 // Displaying the headline field before the Editor
+// THIS WONT WORK IN GUTENBERG SO TURNING IT OFF
 
-function frontpage_header_output_custom_mb_location() {
+/*function frontpage_header_output_custom_mb_location() {
     $cmb = cmb2_get_metabox( 'frontpage_metabox' );
 
     if ( in_array( get_page_template_slug(), $cmb->prop( 'show_on' ), 1 ) ) {
      $cmb->show_form();
     }
 }
-add_action( 'edit_form_after_title', 'frontpage_header_output_custom_mb_location' );
+add_action( 'edit_form_after_title', 'frontpage_header_output_custom_mb_location' );*/
 
 // ------------------------------------------------
 // Start: Front Page 3 Column layout for categories

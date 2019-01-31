@@ -53,13 +53,13 @@
     }
 }
 
-/* .background.casestudy_background {
-	height: 63vh;
+.background.casestudy_background {
+	height: 50vh;
 
 	@media screen and (min-width: 768px) {
 		height: 75vh;
 	}
-} */
+}
 
 .entry-content_editor_content {
 
@@ -230,12 +230,12 @@
 
 .casestudy_client {
 	margin: 2rem 0 0;
-	padding: $space $space $space 33%;
+	padding: $space;
 	background: #DDD;
 	color: $copper;
 	position: relative;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 600px) {
 		margin: 0; 
 		padding: ($space * 2) ($space * 2) ($space * 2) 33%;
 	}
@@ -252,14 +252,24 @@
 }
 
 .casestudy_client_image {
-	width: calc(33%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    background-size: cover;
+	width: calc(100% + 2rem);
+	height: 25vh;
+	margin-top: -$space;
+	margin-left: -$space;
+	margin-right: -$space;
+	margin-bottom: $space;
+	background-size: cover;
     background-position: 50% 50%;
+
+    @media screen and (min-width: 600px) {
+    	margin: 0;
+    	height: auto;
+    	width: calc(33%);
+    	position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;	    
+	}
 
     @media screen and (min-width: 1400px) {
 		width: calc(50% - 2rem);	
@@ -267,9 +277,9 @@
 }
 
 .casestudy_client_content {
-	margin-left: $space;
+	margin-left: 0;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 600px) {
 		margin-left: $space * 1.5;
 	}
 
